@@ -29,7 +29,7 @@
 			}
 
 			.navbar a:hover, .dropdown:hover .dropbtn {
-			  background-color: red;
+			  background-color: blue;
 			}
 
 			.dropdown-content {
@@ -72,13 +72,12 @@
 							<a href="about.html">About</a>
 							<a href="team.html">Team</a>
 							<div class="dropdown">
-							    <button class="dropbtn">Projects
-							      <i class="fa fa-caret-down"></i>
-							    </button>
-							    <div class="dropdown-content">
-							      <a href="project.html">Current Project</a>
-							      <a href="#">Past Projects</a>
-							    </div>
+							<button class="dropbtn" onclick="myFunction()">Dropdown
+							    	<i class="fa fa-caret-down"></i>
+							</button>
+						        <div class="dropdown-content" id="myDropdown">
+							    <a href="projects.html">Current Project</a>
+							    <a href="projects.html">Past Projects</a>
 							</div>
 							<a href="sponsors.html">Sponsors</a>
 						</nav>
