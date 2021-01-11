@@ -2830,6 +2830,10 @@ input, select, textarea {
 				width: 50%;
 			}
 
+			#current {
+				background-color: #505469;
+			}
+
 			.tiles article:nth-child(6n - 5):before {
 				background-color: #6fc3df;
 			}
