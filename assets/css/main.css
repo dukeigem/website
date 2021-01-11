@@ -3310,6 +3310,12 @@ input, select, textarea {
 
 		}
 
+		@media screen and (min-width: 736px){
+			#header nav a:first-child {
+				display: none;
+			}
+		}
+
 		@media screen and (max-width: 736px) {
 
 			#header {
@@ -3327,6 +3333,10 @@ input, select, textarea {
 
 					#header nav a:last-child {
 						padding-right: 1em;
+					}
+
+					#header nav a:not(:first-child){
+						display:none;
 					}
 
 					#header nav a[href="#menu"] {
@@ -3777,6 +3787,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 /* Menu */
 
