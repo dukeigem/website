@@ -12,39 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			body {margin:0;font-family:Arial}
-
-			.topnav {
-			  overflow: hidden;
-			  background-color: #333;
-			}
-
-			.topnav a {
-			  float: left;
-			  display: block;
-			  color: #f2f2f2;
-			  text-align: center;
-			  padding: 14px 16px;
-			  text-decoration: none;
-			  font-size: 17px;
-			}
-
-			.active {
-			  background-color: #4CAF50;
-			  color: white;
-			}
-
-			.topnav .icon {
-			  display: none;
-			}
-
 			.dropdown {
 			  float: left;
 			  overflow: hidden;
 			}
-
 			.dropdown .dropbtn {
-			  font-size: 17px;    
+			  font-size: 16px;  
 			  border: none;
 			  outline: none;
 			  color: white;
@@ -53,7 +26,9 @@
 			  font-family: inherit;
 			  margin: 0;
 			}
-
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			  background-color: blue;
+			}
 			.dropdown-content {
 			  display: none;
 			  position: absolute;
@@ -62,7 +37,6 @@
 			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			  z-index: 1;
 			}
-
 			.dropdown-content a {
 			  float: none;
 			  color: black;
@@ -71,84 +45,35 @@
 			  display: block;
 			  text-align: left;
 			}
-
-			.topnav a:hover, .dropdown:hover .dropbtn {
-			  background-color: #555;
-			  color: white;
-			}
-
 			.dropdown-content a:hover {
 			  background-color: #ddd;
-			  color: black;
 			}
-
 			.dropdown:hover .dropdown-content {
 			  display: block;
 			}
-
-			@media screen and (max-width: 600px) {
-			  .topnav a:not(:first-child), .dropdown .dropbtn {
-			    display: none;
-			  }
-			  .topnav a.icon {
-			    float: right;
-			    display: block;
-			  }
-			}
-
-			@media screen and (max-width: 600px) {
-			  .topnav.responsive {position: relative;}
-			  .topnav.responsive .icon {
-			    position: absolute;
-			    right: 0;
-			    top: 0;
-			  }
-			  .topnav.responsive a {
-			    float: none;
-			    display: block;
-			    text-align: left;
-			  }
-			  .topnav.responsive .dropdown {float: none;}
-			  .topnav.responsive .dropdown-content {position: relative;}
-			  .topnav.responsive .dropdown .dropbtn {
-			    display: block;
-			    width: 100%;
-			    text-align: left;
-			  }
-			}
-			</style>
-
+		</style>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Header -->
 					<header id="header" class="alt">
 						<a href="index.html" class="logo"><strong>DUKE</strong> <span>iGEM</span></a>
-						<div class="topnav" id="myTopnav">
-
+						<nav>
 							<a href="#menu" class="bars">Menu</a>
 							<a href="about.html">About</a>
 							<a href="team.html">Team</a>
 							<div class="dropdown">
-							    <button class="dropbtn">Projects 
-							      <i class="fa fa-caret-down"></i>
-							    </button>
-							    <div class="dropdown-content">
-							      <a href="#">Past Projects</a>
-							      <a href="#">Current Project</a>
-							      <a href="#">test</a>
-						
-							    </div>
-							  </div> 
+							<button class="dropbtn" onclick="myFunction()">Projects
+							    	<i class="fa fa-caret-down"></i>
+							</button>
+						        <div class="dropdown-content" id="myDropdown">
+							    <a href="projects.html">Current Project</a>
+							    <a href="projects.html">Past Projects</a>
+							</div>
 							<a href="sponsors.html">Sponsors</a>
-							<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-						</div>
+						</nav>
 					</header>
-
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
@@ -158,7 +83,6 @@
 							<li><a href="sponsors.html">Sponsors</a></li>
 						</ul>
 					</nav>
-
 				<!-- Banner -->
 					<section id="banner" class="major">
 						<div class="inner">
@@ -171,7 +95,6 @@
 							</div>
 						</div>
 					</section>
-
 				<!-- Main -->
 					<div id="main">
 						<section id="current">
@@ -186,7 +109,6 @@
 									</ul>
 								</div>
 						</section>
-
 						<section>
 							<div class="inner">
 								<header class="major">
@@ -194,7 +116,6 @@
 								</header>
 							</div>
 						</section>
-
 						<!-- One -->
 							<section id="one" class="tiles">
 								<article>
@@ -230,14 +151,11 @@
 									</span>
 									<header class="major">
 									        <h3><a href="past.html" class="link">Explore more past projects</a></h3>
-
 									</header>
 								</article>
 								
 							</section>
-
 					</div>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
@@ -249,9 +167,7 @@
 							</ul>
 						</div>
 					</footer>
-
 			</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -261,16 +177,20 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				/* When the user clicks on the button, 
+				toggle between hiding and showing the dropdown content */
 				function myFunction() {
-				  var x = document.getElementById("myTopnav");
-				  if (x.className === "topnav") {
-				    x.className += " responsive";
-				  } else {
-				    x.className = "topnav";
+				  document.getElementById("myDropdown").classList.toggle("show");
+				}
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  var myDropdown = document.getElementById("myDropdown");
+				    if (myDropdown.classList.contains('show')) {
+				      myDropdown.classList.remove('show');
+				    }
 				  }
 				}
-				</script>
-
-
+			</script>
 	</body>
 </html>
