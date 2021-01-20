@@ -3181,23 +3181,20 @@ input, select, textarea {
 			line-height: inherit;
 		}
 		#header dropdown {
-			  float: right;
+			  float: none;
 			  overflow: hidden;
 			}
 
 			#header dropdown .dropbtn {
 			  cursor: pointer;
 			  font-size: 0.8em;  
-			  border: none;
-			  outline: none;
-			  color: white;
 			  padding: 14px 16px;
 			  background-color: inherit;
 			  font-family: inherit;
 			  margin: 0;
 			}
 
-			#header nav a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+			#header nav a:hover, #header dropdown:hover #header dropbtn, #header dropbtn:focus {
 			  background-color: blue;
 			}
 
