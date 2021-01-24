@@ -2919,6 +2919,37 @@ input, select, textarea {
 			margin: 0 0 0.5em 0;
 		}
 
+
+/*logo gallery*/
+	.tags .sponsor img{
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		width: 80%;
+  		height: auto;
+	}
+	  /*
+	  .tags .row img {
+		margin-top: 8px;
+		max-width: 100%
+	  }*/
+	  
+	  /* Responsive layout - makes a two column-layout instead of four columns */
+	  @media screen and (max-width: 800px) {
+		.tags .column {
+		  flex: 50%;
+		  max-width: 50%;
+		}
+	  }
+	  
+	  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+	  @media screen and (max-width: 600px) {
+		.tags .column {
+		  flex: 100%;
+		  max-width: 100%;
+		}
+	  }	
+
 /* Spotlights */
 
 	.spotlights {
