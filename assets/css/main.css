@@ -2832,7 +2832,6 @@ input, select, textarea {
 
 			#current {
 				background-color: rgba(141, 130, 196, 0.55);
-
 			}
 
 			.tiles article:nth-child(6n - 5):before {
@@ -4066,4 +4065,11 @@ input, select, textarea {
 			transform: none;
 			opacity: 1;
 			visibility: visible;
+		}
+
+
+		.square-image{
+			height: 200px;
+			width: 200px;
+			object-fit: cover;
 		}
