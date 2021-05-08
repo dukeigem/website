@@ -2830,8 +2830,12 @@ input, select, textarea {
 				width: 50%;
 			}
 
+			#curr-heading{
+				background-color: rgba(36, 41, 67, 0.2);
+			}
+
 			#current {
-				background-color: rgba(141, 130, 196, 0.55);
+				background-color: rgba(141, 130, 196, 0.3);
 			}
 
 			.tiles article:nth-child(6n - 5):before {
