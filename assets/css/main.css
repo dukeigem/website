@@ -215,7 +215,7 @@ input, select, textarea {
 	h6 {
 		font-size: 0.7em;
 	}
-	
+
 	.grey-text {
 		font-size: 0.9em;
 	}
@@ -3946,6 +3946,19 @@ input, select, textarea {
 
 	}
 
+.team-section {
+	padding: 0 3.25em;
+}
+
+@media screen and (max-width: 736px) {
+
+	.team-section {
+		padding: 0 2.75em;
+	}
+
+}
+
+
 /* Wrapper */
 
 	#wrapper {
@@ -3953,7 +3966,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		-ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		padding: 3.25em 3.25em 0;
+		padding: 3.25em 0 0;
 	}
 
 		#wrapper.is-transitioning {
@@ -3979,7 +3992,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding: 2.75em 2.75em 0;
+				padding: 2.75em 0 0;
 			}
 
 		}
